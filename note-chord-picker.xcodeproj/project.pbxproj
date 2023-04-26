@@ -14,6 +14,7 @@
 		FB5C5D3129F8AEC2007B3A4B /* note_chord_pickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D3029F8AEC2007B3A4B /* note_chord_pickerTests.swift */; };
 		FB5C5D3B29F8AEC2007B3A4B /* note_chord_pickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D3A29F8AEC2007B3A4B /* note_chord_pickerUITests.swift */; };
 		FB5C5D3D29F8AEC2007B3A4B /* note_chord_pickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D3C29F8AEC2007B3A4B /* note_chord_pickerUITestsLaunchTests.swift */; };
+		FB5C5D4C29F8C8DF007B3A4B /* ChordSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D4B29F8C8DE007B3A4B /* ChordSelectorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		FB5C5D3629F8AEC2007B3A4B /* note-chord-pickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "note-chord-pickerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5C5D3A29F8AEC2007B3A4B /* note_chord_pickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note_chord_pickerUITests.swift; sourceTree = "<group>"; };
 		FB5C5D3C29F8AEC2007B3A4B /* note_chord_pickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note_chord_pickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB5C5D4B29F8C8DE007B3A4B /* ChordSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordSelectorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		FB5C5D1E29F8AEC0007B3A4B /* note-chord-picker */ = {
 			isa = PBXGroup;
 			children = (
+				FB5C5D4B29F8C8DE007B3A4B /* ChordSelectorView.swift */,
 				FB5C5D1F29F8AEC0007B3A4B /* note_chord_pickerApp.swift */,
 				FB5C5D2129F8AEC0007B3A4B /* ContentView.swift */,
 				FB5C5D2329F8AEC2007B3A4B /* Assets.xcassets */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB5C5D2229F8AEC0007B3A4B /* ContentView.swift in Sources */,
+				FB5C5D4C29F8C8DF007B3A4B /* ChordSelectorView.swift in Sources */,
 				FB5C5D2029F8AEC0007B3A4B /* note_chord_pickerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

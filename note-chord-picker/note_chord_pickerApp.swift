@@ -11,7 +11,7 @@ import SwiftUI
 struct note_chord_pickerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ChordSelectorView()
         }
     }
 }
