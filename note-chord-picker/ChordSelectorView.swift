@@ -66,12 +66,18 @@ struct ChordSelectorView: View {
             }
             HStack {
                 Text("Timer duration (seconds): ")
-                TextField("5", value: $timerDuration, formatter: NumberFormatter())
+                TextField("5", value: $timerDuration, formatter: NumberFormatter(), onCommit: {
+                    // Dismiss the keyboard when the user taps the return key or taps outside the TextField
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                })
                     .keyboardType(.numberPad) // Restrict keyboard to numeric input only
             }
             HStack {
                 Text("Number of chords to select: ")
-                TextField("3", text: $numberOfChords)
+                TextField("3", text: $numberOfChords, onCommit: {
+                    // Dismiss the keyboard when the user taps the return key or taps outside the TextField
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                })
                     .keyboardType(.numberPad) // Restrict keyboard to numeric input only
             }
 
