@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB5C5D2029F8AEC0007B3A4B /* note_chord_pickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D1F29F8AEC0007B3A4B /* note_chord_pickerApp.swift */; };
+		FB5C5D2229F8AEC0007B3A4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D2129F8AEC0007B3A4B /* ContentView.swift */; };
+		FB5C5D2429F8AEC2007B3A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB5C5D2329F8AEC2007B3A4B /* Assets.xcassets */; };
+		FB5C5D2729F8AEC2007B3A4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB5C5D2629F8AEC2007B3A4B /* Preview Assets.xcassets */; };
+		FB5C5D3129F8AEC2007B3A4B /* note_chord_pickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D3029F8AEC2007B3A4B /* note_chord_pickerTests.swift */; };
+		FB5C5D3B29F8AEC2007B3A4B /* note_chord_pickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D3A29F8AEC2007B3A4B /* note_chord_pickerUITests.swift */; };
+		FB5C5D3D29F8AEC2007B3A4B /* note_chord_pickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D3C29F8AEC2007B3A4B /* note_chord_pickerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB5C5D2D29F8AEC2007B3A4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB5C5D1429F8AEC0007B3A4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB5C5D1B29F8AEC0007B3A4B;
+			remoteInfo = "note-chord-picker";
+		};
+		FB5C5D3729F8AEC2007B3A4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB5C5D1429F8AEC0007B3A4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB5C5D1B29F8AEC0007B3A4B;
+			remoteInfo = "note-chord-picker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB5C5D1C29F8AEC0007B3A4B /* note-chord-picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "note-chord-picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB5C5D1F29F8AEC0007B3A4B /* note_chord_pickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note_chord_pickerApp.swift; sourceTree = "<group>"; };
+		FB5C5D2129F8AEC0007B3A4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB5C5D2329F8AEC2007B3A4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB5C5D2629F8AEC2007B3A4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB5C5D2C29F8AEC2007B3A4B /* note-chord-pickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "note-chord-pickerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB5C5D3029F8AEC2007B3A4B /* note_chord_pickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note_chord_pickerTests.swift; sourceTree = "<group>"; };
+		FB5C5D3629F8AEC2007B3A4B /* note-chord-pickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "note-chord-pickerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB5C5D3A29F8AEC2007B3A4B /* note_chord_pickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note_chord_pickerUITests.swift; sourceTree = "<group>"; };
+		FB5C5D3C29F8AEC2007B3A4B /* note_chord_pickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note_chord_pickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB5C5D1929F8AEC0007B3A4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB5C5D2929F8AEC2007B3A4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB5C5D3329F8AEC2007B3A4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB5C5D1329F8AEC0007B3A4B = {
+			isa = PBXGroup;
+			children = (
+				FB5C5D1E29F8AEC0007B3A4B /* note-chord-picker */,
+				FB5C5D2F29F8AEC2007B3A4B /* note-chord-pickerTests */,
+				FB5C5D3929F8AEC2007B3A4B /* note-chord-pickerUITests */,
+				FB5C5D1D29F8AEC0007B3A4B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB5C5D1D29F8AEC0007B3A4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C5D1C29F8AEC0007B3A4B /* note-chord-picker.app */,
+				FB5C5D2C29F8AEC2007B3A4B /* note-chord-pickerTests.xctest */,
+				FB5C5D3629F8AEC2007B3A4B /* note-chord-pickerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB5C5D1E29F8AEC0007B3A4B /* note-chord-picker */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C5D1F29F8AEC0007B3A4B /* note_chord_pickerApp.swift */,
+				FB5C5D2129F8AEC0007B3A4B /* ContentView.swift */,
+				FB5C5D2329F8AEC2007B3A4B /* Assets.xcassets */,
+				FB5C5D2529F8AEC2007B3A4B /* Preview Content */,
+			);
+			path = "note-chord-picker";
+			sourceTree = "<group>";
+		};
+		FB5C5D2529F8AEC2007B3A4B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C5D2629F8AEC2007B3A4B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB5C5D2F29F8AEC2007B3A4B /* note-chord-pickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C5D3029F8AEC2007B3A4B /* note_chord_pickerTests.swift */,
+			);
+			path = "note-chord-pickerTests";
+			sourceTree = "<group>";
+		};
+		FB5C5D3929F8AEC2007B3A4B /* note-chord-pickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C5D3A29F8AEC2007B3A4B /* note_chord_pickerUITests.swift */,
+				FB5C5D3C29F8AEC2007B3A4B /* note_chord_pickerUITestsLaunchTests.swift */,
+			);
+			path = "note-chord-pickerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB5C5D1B29F8AEC0007B3A4B /* note-chord-picker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB5C5D4029F8AEC2007B3A4B /* Build configuration list for PBXNativeTarget "note-chord-picker" */;
+			buildPhases = (
+				FB5C5D1829F8AEC0007B3A4B /* Sources */,
+				FB5C5D1929F8AEC0007B3A4B /* Frameworks */,
+				FB5C5D1A29F8AEC0007B3A4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "note-chord-picker";
+			productName = "note-chord-picker";
+			productReference = FB5C5D1C29F8AEC0007B3A4B /* note-chord-picker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB5C5D2B29F8AEC2007B3A4B /* note-chord-pickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB5C5D4329F8AEC2007B3A4B /* Build configuration list for PBXNativeTarget "note-chord-pickerTests" */;
+			buildPhases = (
+				FB5C5D2829F8AEC2007B3A4B /* Sources */,
+				FB5C5D2929F8AEC2007B3A4B /* Frameworks */,
+				FB5C5D2A29F8AEC2007B3A4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB5C5D2E29F8AEC2007B3A4B /* PBXTargetDependency */,
+			);
+			name = "note-chord-pickerTests";
+			productName = "note-chord-pickerTests";
+			productReference = FB5C5D2C29F8AEC2007B3A4B /* note-chord-pickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB5C5D3529F8AEC2007B3A4B /* note-chord-pickerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB5C5D4629F8AEC2007B3A4B /* Build configuration list for PBXNativeTarget "note-chord-pickerUITests" */;
+			buildPhases = (
+				FB5C5D3229F8AEC2007B3A4B /* Sources */,
+				FB5C5D3329F8AEC2007B3A4B /* Frameworks */,
+				FB5C5D3429F8AEC2007B3A4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB5C5D3829F8AEC2007B3A4B /* PBXTargetDependency */,
+			);
+			name = "note-chord-pickerUITests";
+			productName = "note-chord-pickerUITests";
+			productReference = FB5C5D3629F8AEC2007B3A4B /* note-chord-pickerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB5C5D1429F8AEC0007B3A4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					FB5C5D1B29F8AEC0007B3A4B = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					FB5C5D2B29F8AEC2007B3A4B = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FB5C5D1B29F8AEC0007B3A4B;
+					};
+					FB5C5D3529F8AEC2007B3A4B = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FB5C5D1B29F8AEC0007B3A4B;
+					};
+				};
+			};
+			buildConfigurationList = FB5C5D1729F8AEC0007B3A4B /* Build configuration list for PBXProject "note-chord-picker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB5C5D1329F8AEC0007B3A4B;
+			productRefGroup = FB5C5D1D29F8AEC0007B3A4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB5C5D1B29F8AEC0007B3A4B /* note-chord-picker */,
+				FB5C5D2B29F8AEC2007B3A4B /* note-chord-pickerTests */,
+				FB5C5D3529F8AEC2007B3A4B /* note-chord-pickerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB5C5D1A29F8AEC0007B3A4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB5C5D2729F8AEC2007B3A4B /* Preview Assets.xcassets in Resources */,
+				FB5C5D2429F8AEC2007B3A4B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB5C5D2A29F8AEC2007B3A4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB5C5D3429F8AEC2007B3A4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB5C5D1829F8AEC0007B3A4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB5C5D2229F8AEC0007B3A4B /* ContentView.swift in Sources */,
+				FB5C5D2029F8AEC0007B3A4B /* note_chord_pickerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB5C5D2829F8AEC2007B3A4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB5C5D3129F8AEC2007B3A4B /* note_chord_pickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB5C5D3229F8AEC2007B3A4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB5C5D3B29F8AEC2007B3A4B /* note_chord_pickerUITests.swift in Sources */,
+				FB5C5D3D29F8AEC2007B3A4B /* note_chord_pickerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB5C5D2E29F8AEC2007B3A4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB5C5D1B29F8AEC0007B3A4B /* note-chord-picker */;
+			targetProxy = FB5C5D2D29F8AEC2007B3A4B /* PBXContainerItemProxy */;
+		};
+		FB5C5D3829F8AEC2007B3A4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB5C5D1B29F8AEC0007B3A4B /* note-chord-picker */;
+			targetProxy = FB5C5D3729F8AEC2007B3A4B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FB5C5D3E29F8AEC2007B3A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB5C5D3F29F8AEC2007B3A4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB5C5D4129F8AEC2007B3A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"note-chord-picker/Preview Content\"";
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "leeangioletti.note-chord-picker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB5C5D4229F8AEC2007B3A4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"note-chord-picker/Preview Content\"";
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "leeangioletti.note-chord-picker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FB5C5D4429F8AEC2007B3A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "leeangioletti.note-chord-pickerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/note-chord-picker.app/note-chord-picker";
+			};
+			name = Debug;
+		};
+		FB5C5D4529F8AEC2007B3A4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "leeangioletti.note-chord-pickerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/note-chord-picker.app/note-chord-picker";
+			};
+			name = Release;
+		};
+		FB5C5D4729F8AEC2007B3A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "leeangioletti.note-chord-pickerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "note-chord-picker";
+			};
+			name = Debug;
+		};
+		FB5C5D4829F8AEC2007B3A4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7M7SN6P8B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "leeangioletti.note-chord-pickerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "note-chord-picker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB5C5D1729F8AEC0007B3A4B /* Build configuration list for PBXProject "note-chord-picker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB5C5D3E29F8AEC2007B3A4B /* Debug */,
+				FB5C5D3F29F8AEC2007B3A4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB5C5D4029F8AEC2007B3A4B /* Build configuration list for PBXNativeTarget "note-chord-picker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB5C5D4129F8AEC2007B3A4B /* Debug */,
+				FB5C5D4229F8AEC2007B3A4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB5C5D4329F8AEC2007B3A4B /* Build configuration list for PBXNativeTarget "note-chord-pickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB5C5D4429F8AEC2007B3A4B /* Debug */,
+				FB5C5D4529F8AEC2007B3A4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB5C5D4629F8AEC2007B3A4B /* Build configuration list for PBXNativeTarget "note-chord-pickerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB5C5D4729F8AEC2007B3A4B /* Debug */,
+				FB5C5D4829F8AEC2007B3A4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB5C5D1429F8AEC0007B3A4B /* Project object */;
+}
