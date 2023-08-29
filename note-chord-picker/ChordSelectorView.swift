@@ -8,99 +8,221 @@
 
 import SwiftUI
 
+
+public protocol PianoKeyboardDelegate: AnyObject {
+    func pianoKeyUp(_ keyNumber: Int)
+    func pianoKeyDown(_ keyNumber: Int)
+}
+
 struct ChordSelectorView: View {
     // Define the pool of chords as an array of strings
-    let chordPool: [String] = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 
     // Define the state variables
-    @State private var selectedChords: [String] = []
+    @State public var selectedChords: [String]
     @State private var isRunning: Bool = false
-    @State private var timerDuration: Int = 5
-    @State private var numberOfChords: String = "3"
     @State var timeRemaining: Int?
+    @Binding var aggregatePools: Bool
+    
+    @Environment(\.scenePhase) private var scenePhase
+
+    private let audioEngine = AudioEngine()
+    
 
     // Define the timer that triggers the chord selection
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-//
-//    var timer: Timer {
-//        Timer.scheduledTimer(withTimeInterval: Double(timerDuration) ?? 5, repeats: true) { timer in
-//            print("EXECUTED", timeRemaining!)
-//            // If the timer is running, select n number of chords randomly from the pool
-//            if isRunning {
-//                let count = Int(numberOfChords) ?? 3
-//                selectedChords = chordPool.shuffled().prefix(count).map { $0 }
-//                // Set the time remaining based on the timer's remaining time
-//                timeRemaining = timer.fireDate.timeIntervalSinceNow
-//            } else {
-//                // If the timer is not running, reset the time remaining to nil
-//                timeRemaining = nil
-//            }
-//        }
-//    }
+    
+    @Binding public var timerDuration: Int
+    @Binding public var drawSize: Int
+    @Binding public var items: [NoteChordPool]
+    
+    @State private var showPopup = false
+
+    @FocusState private var isChordSelectorFocused: Bool
+    @FocusState private var isTimerSelectorFocused: Bool
+    
+    let saveAction: ()->Void
+
+
 
     var body: some View {
-        VStack {
-            Text("\(selectedChords.joined(separator: " "))")
-                .font(.system(size: 80))
-                .fontWeight(.semibold)
-                .padding()
-            if let timeRemaining = timeRemaining {
-                Text("Time remaining: \(Int(timeRemaining))")
-                    .font(.title2)
+        NavigationStack {
+            VStack {
+                
+                VStack {
+                    Text("\(selectedChords.joined(separator: " "))")
+                        .font(.system(size: 80))
+                        .fontWeight(.semibold)
+                        .minimumScaleFactor(0.5)
+                        .lineLimit(1)
+                        .padding()
+                    Text("Time remaining: \(Int(timeRemaining ?? timerDuration))")
+                        .font(.title2)
+                        .padding()
+                    
+                    Button {
+                        // Toggle the state of the timer
+                        isRunning.toggle()
+                        
+                        audioEngine.pianoKeyDown(60)
+                        
+                        if isRunning {
+                            // If the timer is starting, select n number of chords randomly from the pool
+                            selectedChords = randomlySelectItems(items: items, drawSize: drawSize, aggregatePools: aggregatePools)
+                            timeRemaining = timerDuration
+                            //                    _ = timer // Start the timer
+                        } else {
+                            // If the timer is stopping, invalidate it
+                            //                    timer.invalidate()
+                        }
+                    } label: {
+                        Text(isRunning ? "Stop timer" : "Start timer")
+                            .padding(.horizontal, 50)
+                            .frame(height: 44)
+                    }
+                    .tint(isRunning ? Color(.systemRed) : Color(.systemGreen))
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
                     .padding()
-            }
-            Button(isRunning ? "Stop" : "Start") {
-                // Toggle the state of the timer
-                isRunning.toggle()
-
-                if isRunning {
-                    // If the timer is starting, select n number of chords randomly from the pool
-                    let count = Int(numberOfChords) ?? 3
-                    selectedChords = chordPool.shuffled().prefix(count).map { $0 }
-                    timeRemaining = timerDuration
-//                    _ = timer // Start the timer
-                } else {
-                    // If the timer is stopping, invalidate it
-//                    timer.invalidate()
+                }
+                .padding()
+                
+                VStack   {
+                    
+                    HStack {
+                        Text("Timer duration (seconds): ")
+                        TextField("5", value: $timerDuration, formatter: NumberFormatter())
+                            .padding()
+                            .keyboardType(.numberPad)
+                            .background(Color(uiColor: .secondarySystemBackground))
+                            .cornerRadius(10)
+                            .fixedSize()
+                            .focused($isTimerSelectorFocused)
+                            .onTapGesture {
+                                isTimerSelectorFocused = true
+                            }
+                            .onReceive(NotificationCenter.default.publisher(for: UITextField.textDidBeginEditingNotification)) { obj in
+                                if let textField = obj.object as? UITextField {
+                                    textField.selectedTextRange = textField.textRange(from: textField.beginningOfDocument, to: textField.endOfDocument)
+                                }
+                            }
+                    }
+                    HStack {
+                        Text("Number of chords to select: ")
+                        TextField("\(drawSize)", value: $drawSize, formatter: NumberFormatter())
+                            .padding()
+                            .keyboardType(.numberPad)
+                            .background(Color(uiColor: .secondarySystemBackground))
+                            .cornerRadius(10)
+                            .fixedSize()
+                            .focused($isChordSelectorFocused)
+                            .onTapGesture {
+                                isChordSelectorFocused = true
+                            }
+                            .onReceive(NotificationCenter.default.publisher(for: UITextField.textDidBeginEditingNotification)) { obj in
+                                if let textField = obj.object as? UITextField {
+                                    textField.selectedTextRange = textField.textRange(from: textField.beginningOfDocument, to: textField.endOfDocument)
+                                }
+                            }
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        Text("Aggregate pools:")
+                        Toggle("", isOn: $aggregatePools)
+                            .labelsHidden()
+                        Spacer()
+                    }
+                    
+                    
+                    NavigationLink(destination: ItemsView(items: $items)) {
+                        let numberOfActivePools = items.filter { $0.active }.count
+                        Text(numberOfActivePools == 0 ? "Select pools" : numberOfActivePools > 1 ? "Selected \(numberOfActivePools) pools" : "Selected \(numberOfActivePools) pool")
+                            .padding()
+                    }
                 }
             }
-            HStack {
-                Text("Timer duration (seconds): ")
-                TextField("5", value: $timerDuration, formatter: NumberFormatter(), onCommit: {
-                    // Dismiss the keyboard when the user taps the return key or taps outside the TextField
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                })
-                    .keyboardType(.numberPad) // Restrict keyboard to numeric input only
+            .onReceive(timer) { _ in
+                if timeRemaining == 1 {
+                    timeRemaining = timerDuration
+                    selectedChords = randomlySelectItems(items: items, drawSize: drawSize, aggregatePools: aggregatePools)
+                    return
+                }
+                if isRunning {
+                    timeRemaining! -= 1
+                }
             }
-            HStack {
-                Text("Number of chords to select: ")
-                TextField("3", text: $numberOfChords, onCommit: {
-                    // Dismiss the keyboard when the user taps the return key or taps outside the TextField
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                })
-                    .keyboardType(.numberPad) // Restrict keyboard to numeric input only
+            .onTapGesture {
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
-
-
-
         }
-        .onReceive(timer) { _ in
-                        if timeRemaining == 1 {
-                            let count = Int(numberOfChords) ?? 3
-                            timeRemaining = timerDuration
-                            selectedChords = chordPool.shuffled().prefix(count).map { $0 }
-                            return
-                        }
-                        if isRunning {
-                            timeRemaining! -= 1
-                        }
-                    }
+        .onChange(of: scenePhase) { phase in
+            if phase == .inactive { saveAction() }
+        }
+        .onAppear() {
+            audioEngine.start()
+        }
     }
 }
 
+func randomlySelectItems(items: [NoteChordPool], drawSize: Int, aggregatePools: Bool) -> [String] {
+    var lake: [NoteChordPool]
+    if (aggregatePools) {
+        lake = items.filter { $0.active }
+    } else {
+        lake = items.filter { $0.active }.shuffled().prefix(1).map { $0 }
+    }
+    return lake.flatMap({$0.pool}).shuffled().prefix(drawSize).map { $0 }
+}
+
+
+    
+
+struct MultipleSelectionRow: View {
+    @State private var showingDeleteAlert = false
+
+   let item: NoteChordPool
+   let isSelected: Bool
+    @Binding public var items: Set<NoteChordPool>
+    @Binding public var showingSheet: Bool
+    @Environment(\.editMode) private var editMode
+
+
+    let action: () -> Void
+
+   var body: some View {
+       Button(action: action) {
+           withAnimation {
+               HStack {
+                   if editMode?.wrappedValue.isEditing == true {
+                       Button(role: .destructive, action: {
+                           showingDeleteAlert = true
+                       }, label: {
+                           Image(systemName: "minus.circle.fill")
+                               .foregroundColor(.red)
+                       })
+                   }
+                   
+                   Text(item.name)
+                   
+                   if isSelected && editMode?.wrappedValue.isEditing != true {
+                       Spacer()
+                       Image(systemName: "checkmark")
+                   }
+               }
+           }
+       }
+//       .swipeActions(allowsFullSwipe: false) {
+//           Button("Delete", role: .destructive) {
+//
+//           }
+//       }
+       .deleteDisabled(editMode?.wrappedValue.isEditing != true)
+   }
+}
 
 struct ChordSelectorView_Previews: PreviewProvider {
     static var previews: some View {
-        ChordSelectorView()
+        let selectedChords = randomlySelectItems(items: NoteChordPool.sampleData, drawSize: 3, aggregatePools: true)
+        ChordSelectorView(selectedChords: selectedChords, aggregatePools: .constant(true), timerDuration: .constant(5), drawSize: .constant(3), items: .constant(NoteChordPool.sampleData), saveAction: {})
     }
 }

@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB4893A42A0087BB002A4E88 /* NoteChordPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4893A32A0087BB002A4E88 /* NoteChordPool.swift */; };
+		FB4893A62A0088ED002A4E88 /* NoteChordPoolStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4893A52A0088ED002A4E88 /* NoteChordPoolStore.swift */; };
 		FB5C5D2029F8AEC0007B3A4B /* note_chord_pickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D1F29F8AEC0007B3A4B /* note_chord_pickerApp.swift */; };
-		FB5C5D2229F8AEC0007B3A4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D2129F8AEC0007B3A4B /* ContentView.swift */; };
 		FB5C5D2429F8AEC2007B3A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB5C5D2329F8AEC2007B3A4B /* Assets.xcassets */; };
 		FB5C5D2729F8AEC2007B3A4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB5C5D2629F8AEC2007B3A4B /* Preview Assets.xcassets */; };
 		FB5C5D3129F8AEC2007B3A4B /* note_chord_pickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D3029F8AEC2007B3A4B /* note_chord_pickerTests.swift */; };
 		FB5C5D3B29F8AEC2007B3A4B /* note_chord_pickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D3A29F8AEC2007B3A4B /* note_chord_pickerUITests.swift */; };
 		FB5C5D3D29F8AEC2007B3A4B /* note_chord_pickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D3C29F8AEC2007B3A4B /* note_chord_pickerUITestsLaunchTests.swift */; };
 		FB5C5D4C29F8C8DF007B3A4B /* ChordSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C5D4B29F8C8DE007B3A4B /* ChordSelectorView.swift */; };
+		FBD1241B2A44DCC8000C243B /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD1241A2A44DCC8000C243B /* AudioEngine.swift */; };
+		FBD5D9D12A01F074002EEB0F /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD5D9D02A01F074002EEB0F /* ItemsView.swift */; };
+		FBD5D9D32A01FACA002EEB0F /* PoolDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD5D9D22A01FACA002EEB0F /* PoolDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB4893A32A0087BB002A4E88 /* NoteChordPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoteChordPool.swift; path = ../../../../NoteChordPool.swift; sourceTree = "<group>"; };
+		FB4893A52A0088ED002A4E88 /* NoteChordPoolStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoteChordPoolStore.swift; path = ../../../../NoteChordPoolStore.swift; sourceTree = "<group>"; };
 		FB5C5D1C29F8AEC0007B3A4B /* note-chord-picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "note-chord-picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5C5D1F29F8AEC0007B3A4B /* note_chord_pickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note_chord_pickerApp.swift; sourceTree = "<group>"; };
-		FB5C5D2129F8AEC0007B3A4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB5C5D2329F8AEC2007B3A4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB5C5D2629F8AEC2007B3A4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB5C5D2C29F8AEC2007B3A4B /* note-chord-pickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "note-chord-pickerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +51,9 @@
 		FB5C5D3A29F8AEC2007B3A4B /* note_chord_pickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note_chord_pickerUITests.swift; sourceTree = "<group>"; };
 		FB5C5D3C29F8AEC2007B3A4B /* note_chord_pickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note_chord_pickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB5C5D4B29F8C8DE007B3A4B /* ChordSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordSelectorView.swift; sourceTree = "<group>"; };
+		FBD1241A2A44DCC8000C243B /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioEngine.swift; path = ../../../AudioEngine.swift; sourceTree = "<group>"; };
+		FBD5D9D02A01F074002EEB0F /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsView.swift; path = ../../../ItemsView.swift; sourceTree = "<group>"; };
+		FBD5D9D22A01FACA002EEB0F /* PoolDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PoolDetailView.swift; path = ../../../PoolDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB4893A22A008787002A4E88 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB4893A32A0087BB002A4E88 /* NoteChordPool.swift */,
+				FB4893A52A0088ED002A4E88 /* NoteChordPoolStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FB5C5D1329F8AEC0007B3A4B = {
 			isa = PBXGroup;
 			children = (
@@ -96,11 +113,14 @@
 		FB5C5D1E29F8AEC0007B3A4B /* note-chord-picker */ = {
 			isa = PBXGroup;
 			children = (
+				FB4893A22A008787002A4E88 /* Models */,
 				FB5C5D4B29F8C8DE007B3A4B /* ChordSelectorView.swift */,
 				FB5C5D1F29F8AEC0007B3A4B /* note_chord_pickerApp.swift */,
-				FB5C5D2129F8AEC0007B3A4B /* ContentView.swift */,
 				FB5C5D2329F8AEC2007B3A4B /* Assets.xcassets */,
 				FB5C5D2529F8AEC2007B3A4B /* Preview Content */,
+				FBD5D9D02A01F074002EEB0F /* ItemsView.swift */,
+				FBD5D9D22A01FACA002EEB0F /* PoolDetailView.swift */,
+				FBD1241A2A44DCC8000C243B /* AudioEngine.swift */,
 			);
 			path = "note-chord-picker";
 			sourceTree = "<group>";
@@ -218,6 +238,9 @@
 				Base,
 			);
 			mainGroup = FB5C5D1329F8AEC0007B3A4B;
+			packageReferences = (
+				FB6C4A8929FB6829000C16DE /* XCRemoteSwiftPackageReference "Pitchy" */,
+			);
 			productRefGroup = FB5C5D1D29F8AEC0007B3A4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,9 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB5C5D2229F8AEC0007B3A4B /* ContentView.swift in Sources */,
+				FBD5D9D32A01FACA002EEB0F /* PoolDetailView.swift in Sources */,
+				FB4893A62A0088ED002A4E88 /* NoteChordPoolStore.swift in Sources */,
 				FB5C5D4C29F8C8DF007B3A4B /* ChordSelectorView.swift in Sources */,
+				FBD5D9D12A01F074002EEB0F /* ItemsView.swift in Sources */,
+				FB4893A42A0087BB002A4E88 /* NoteChordPool.swift in Sources */,
 				FB5C5D2029F8AEC0007B3A4B /* note_chord_pickerApp.swift in Sources */,
+				FBD1241B2A44DCC8000C243B /* AudioEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +458,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,6 +488,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,6 +618,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB6C4A8929FB6829000C16DE /* XCRemoteSwiftPackageReference "Pitchy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Pitchy.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = FB5C5D1429F8AEC0007B3A4B /* Project object */;
 }
